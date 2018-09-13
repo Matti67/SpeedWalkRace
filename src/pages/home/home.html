@@ -6,22 +6,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content center text-center padding>
   <ion-grid>
-        <ion-row>
-            <ion-col >
-              <button ion-button round color="secondary" (click)="gotoAdvanced()">Advance</button>
+        <ion-row align-items-right justify-content: end>
+            <ion-col col-6>
+              <button ion-button round color="secondary" (click)="gotoBeginners()">5</button>
+              <ion-label text-center string>Beginners</ion-label>
             </ion-col>
-            <ion-col >
-              <button ion-button round color="danger" (click)="gotoBeginners()">Beginners</button>
+            <ion-col col-6>
+              <button ion-button round color="danger" (click)="gotoAdvanced()">10</button>
+              <ion-label text-center string>Advanced</ion-label>
             </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col >
-              <button ion-button round color="light" (click)="gotoRace()">Race</button>
+            <ion-col col-6>
+              <button ion-button round color="light" (click)="gotoRace()">15</button>
+              <ion-label text-center string>Race</ion-label>
             </ion-col>
-            <ion-col >
-              <button ion-button round color="twitter" (click)="gotoUltra()">Ultra</button>
+            <ion-col col-6>
+              <button ion-button round color="twitter" (click)="gotoUltra()">20</button>
+              <ion-label text-center string>Ultra</ion-label>
             </ion-col>
         </ion-row>
     </ion-grid>
