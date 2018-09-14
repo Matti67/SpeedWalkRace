@@ -11,6 +11,9 @@ import { BeginnersPage } from '../pages/beginners/beginners';
 import { RacePage } from '../pages/race/race';
 import { UltraPage } from '../pages/ultra/ultra';
 
+import { Geolocation } from '@ionic-native/geolocation';
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -22,6 +25,7 @@ import { UltraPage } from '../pages/ultra/ultra';
   ],
   imports: [
     BrowserModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -36,7 +40,8 @@ import { UltraPage } from '../pages/ultra/ultra';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation
   ]
 })
 export class AppModule {}
